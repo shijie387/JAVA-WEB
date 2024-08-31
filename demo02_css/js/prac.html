@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function func1(){
+            //alert("clicked")
+            console.log("clicked")
+        }
+        function func2(){
+            //alert("clicked")
+            console.log("clicked")
+        }
+        function func3(){
+            //alert("clicked")
+            console.log("clicked")
+        }
+        function testSubmit(){
+            alter("submitted")
+            
+            // alter() prompt() 
+            // var flag = confirm() return a boolean value
+
+            var flag = confirm("submit???") 
+            if(!flag){
+                event.preventDefault()
+            }
+        }
+    </script>
+
+    <script>
+    window.onload = function(){
+        var btn = document.getElementById("btn1")
+        btn.onclick=function(){
+            alter("clicked")
+    }
+    }
+
+    var div1 = document.getElementById("d1")
+    div1.onclick=function(){
+        this.style.backgroundColor="red"
+    }
+
+    </script>
+</head>
+<body>
+
+    <div class="div1">
+
+    </div>
+    
+    <input 
+        type="button" 
+        name="button" 
+        onclick="func1(),func2()"
+        ondblclick="func3()">
+
+        <br>
+
+        <img 
+            src="/demo01_html/img/1_uNCVd_VqFOcdxhsL71cT5Q.webp" 
+            onmousemove="func1()"
+            onmousedown="func2()"
+            onmouseleave="func3()"
+            >
+
+            <input type="text" onkeydown="func1()">
+
+
+
+            <form action="/demo01_html/01firstpage.html" method="get">
+                uname <input type="text" name="realname"
+                onfocus="func1()"
+                onblur="func1()"
+                onchange="func1()"><br>
+                password <input type="password" name="pwd">
+                origin:
+                <select onchange="func1()">
+                    <option value="1">l1</option>
+                    <option value="2">l2</option>
+                    <option value="3">l3</option>
+                </select>
+                <input type="submit" value="register">
+                <input type="reset" value="clear">
+            </form>
+
+
+            <button id ="btn1"></button>
+            
+</body>
+</html>

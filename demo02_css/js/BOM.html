@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function func1(){
+            alert("alert")
+        }
+
+        function func2(){
+            var con = confirm("delete???")
+            if(con){
+                alert("confirm clicked")
+            }else{
+                alert("not clicked")
+            }
+        }
+
+        function func3(){
+            var res = prompt("input your nickname pls: ","eg: zhang")
+            alert("your input:" + res)
+        }
+        function func4(){
+            var res = confirm("are you sure skip to atguigu?")
+
+            if(res){
+                location.href="http://www.atguigu.com"
+            }
+        }
+    </script>
+
+    <script>
+        function save(){
+            sessionStorage.setItem("s-msg", "s-value")
+            localStorage.setItem("l-msg","l-value")
+        }
+        function remove(){
+            sessionStorage.removeItem("s-msg")
+            localStorage.removeItem("l-msg")
+        }
+        function read(){
+            // sessionStorage.read= "s-msg"
+            // localStorage.read ="l-msg"
+
+            console.log(sessionStorage.getItem("s-msg"))
+            console.log(localStorage.getItem("l-msg"))
+        }
+    </script>
+
+</head>
+<body>
+    
+
+    <input type="button" id="b1" onclick="func1()" value="alert"> 
+    <input type="button" id="b2" onclick="func2()" value="confirm"> 
+    <input type="button" id="b3" onclick="func3()" value="prompt"> 
+    <input type="button" id="b4" onclick="func4()" value="goatguigu"><br><br><br><br>
+
+    <input type="button" onclick="save()" value="save">
+    <input type="button" onclick="remove()" value="remove">
+    <input type="button" onclick="read()" value="read">
+
+
+</body>
+</html>

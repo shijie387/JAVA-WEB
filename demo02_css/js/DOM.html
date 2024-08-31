@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+</head>
+<body>
+    <ul id="city">
+        <li id="bj">北京</li>
+        <li id="sh">上海</li>
+        <li id="sz">深圳</li>
+        <li id="gz">广州</li>
+    </ul>
+    <hr>
+    <!-- 目标1 在城市列表的最后添加一个子标签  <li id="cs">长沙</li>  -->
+    <button onclick="addCs()">增加长沙</button>
+    <!-- 目标2 在城市列表的深圳前添加一个子标签  <li id="cs">长沙</li>  -->
+    <button onclick="addCsBeforeSz()">在深圳前插入长沙</button>
+    <!-- 目标3  将城市列表的深圳替换为  <li id="cs">长沙</li>  -->
+    <button onclick="replaceSz()">替换深圳</button>
+    <!-- 目标4  将城市列表删除深圳  -->
+    <button onclick="removeSz()">删除深圳</button>
+    <!-- 目标5  清空城市列表  -->
+    <button onclick="clearCity()">清空</button>
+  
+    
+    <script>
+
+        function addCs(){
+             var csli = document.createElement("li")
+             csli.id = "cs"
+             csli.innerText = "changsha"
+ 
+             var all = document.getElementById("city")
+             all.appendChild(csli)
+        }
+        function addCsBeforeSz(){
+
+             var csli = document.createElement("li")
+             csli.id = "cs"
+             csli.innerText = "changsha"
+
+             var all = document.getElementById("city")
+             var szli = document.getElementById("sz")
+             all.insertBefore(csli,szli)
+        }
+        function replaceSz(){
+             var szli = document.getElementById("sz")
+
+             var csli = document.createElement("li")
+             csli.id = "cs"
+             csli.innerText = "changsha"
+
+             var all = document.getElementById("city")
+
+             all.replaceChild(csli,szli)
+        }
+        function removeSz(){
+            var szli = document.getElementById("sz")
+
+             var all = document.getElementById("city")
+             all.removeChild(szli)
+        }
+        function clearCity(){
+            var all = document.getElementById("city")
+            all.remove()
+            // all.innerHTML =""
+        }
+ 
+     </script>
+</body>
+</html>

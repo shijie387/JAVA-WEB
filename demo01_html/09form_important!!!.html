@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+    send data the a server; submit your data to somewhere
+
+    get: 
+        sending data through url
+        prototal://ip:port/address?key=value&key=value
+        limitation: data amount submitted
+        can only submit text
+        higher efficiency
+    post:
+        pack your data and submit
+    
+    put delete option trace... 
+
+    -->
+
+    <form action="01firstpage.html" method="post">
+        nickname: <input type="text" name="nickname" value="" placeholder="input your nickname"/><br>
+        <!--
+        readonly: be submitted but cannot edit
+        disabled: cannot be submitted and cannot edit
+        placeholder: cannot be submitted and cannot edit but show in the page
+        type="hidden": be submitted but no show in the page
+        -->
+        password: <input type="password" name="pwd"/><br>
+        position: 
+            p1 <input type="radio" name="pos" value="1"/>
+            p2 <input type="radio" name="pos" value="2"/>
+            p3 <input type="radio" name="pos" value="3" checked/><br> 
+            <!--checked: set defalult value-->
+        food: 
+            f1 <input type="checkbox" name="f1" value="1">
+            f2 <input type="checkbox" name="f2" value="2" checked>
+            f3 <input type="checkbox" name="f3" value="3" checked>
+            f4 <input type="checkbox" name="f4" value="4"><br>
+        province:
+        <select name="pro">
+            <option value="1">beijing</option>
+            <option value="2">wuhan</option>
+            <option value="3">hangzhou</option>
+            <option value="4">tokyo</option>
+            <option value="5" selected>pls select a pro</option>
+        </select><br>
+        self_into:
+        <textarea style="height: 300px;" name="intro">hello</textarea><br>
+
+        <br>
+        <input type="submit"/>
+        <input type="reset"/>
+
+    </form>
+    
+</body>
+</html>
